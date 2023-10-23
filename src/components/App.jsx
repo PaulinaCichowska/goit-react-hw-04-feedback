@@ -3,6 +3,7 @@ import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions'
 import { Statistics } from './Statistics/Statistics'
 import { Notification } from './Notification/Notification'
 import React, { Component } from 'react';
+import css from "./App.module.css"
 
 
 
@@ -43,7 +44,7 @@ export class App extends Component {
 
   render() {
     const { good, neutral, bad, total, positivePercentage } = this.state
-    return <>
+    return <div className={css.container}>
       <Section title="Please leave feedback">
         <FeedbackOptions onLeaveFeedback={this.handleIncrement}  ></FeedbackOptions>
       </Section >
@@ -52,6 +53,6 @@ export class App extends Component {
           ? <Notification message="There is no feedback"></Notification>
           : <Statistics good={good} neutral={neutral} bad={bad} total={total} positivePercentage={positivePercentage}></Statistics>}
       </Section>
-    </>
+    </div>
   }
 };
