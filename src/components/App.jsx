@@ -23,7 +23,7 @@ export const App = () => {
     }, [good, total]);
 
 
-    //dodawanie//
+    //dodawanie///
     const handleIncrement = (e) => {
         const { name } = e.target
         switch (name) {
