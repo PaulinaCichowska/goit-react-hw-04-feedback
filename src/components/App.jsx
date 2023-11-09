@@ -19,7 +19,6 @@ export const App = () => {
     //obliczanie procentów//
     useEffect(() => {
         setPositivePercentage(Math.floor((good / total) * 100))
-        console.log(good)
     }, [good, total]);
 
 
